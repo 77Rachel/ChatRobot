@@ -10,6 +10,7 @@ import Database from '@tauri-apps/plugin-sql';
 
 interface Message extends DbMessage {
   webSearchResults?: WebSearchResult[];
+  interrupted?: boolean;
 }
 
 interface Chat {

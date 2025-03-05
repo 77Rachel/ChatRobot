@@ -34,7 +34,7 @@ const parseMessageContent = (content: string) => {
     return {
       thinkingContent: content.replace("<think>", "").trim(),
       textContent: "",
-      thinkingComplete: false,
+      thinkingComplete: props.message.interrupted === true,
     };
   }
   return {

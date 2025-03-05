@@ -47,7 +47,7 @@ const { t } = useI18n();
 const selectedModelIdentifier = ref<string | null>(
   props.modelIdentifier !== null
     ? props.modelIdentifier
-    : modelStore.selectedModelIdentifier || "deepseek/deepseek-r1"
+    : modelStore.selectedModelIdentifier
 );
 
 // 计算属性：获取所有活跃模型列表

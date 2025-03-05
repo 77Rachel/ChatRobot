@@ -305,6 +305,20 @@ export function useChat({
       abortController.value.abort();
       abortController.value = null;
     }
+    
+    // 设置最后一条助手消息的 interrupted 属性为 true
+    if (messages.value.length > 0) {
+      const lastMessage = messages.value[messages.value.length - 1];
+      if (lastMessage.role === 'assistant') {
+        lastMessage.interrupted = true;
+        
+        // 调用 onFinish 回调保存中断的消息
+        if (onFinish) {
+          onFinish(lastMessage);
+        }
+      }
+    }
+    
     status.value = 'idle';
   };
 
