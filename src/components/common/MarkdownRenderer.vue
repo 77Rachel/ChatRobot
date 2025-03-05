@@ -32,7 +32,7 @@ const isCitation = (classes: string[] | string | undefined) => {
     :markdown="props.content"
     :remarkPlugins="[RemarkMath, RemarkGfm, RemarkCitation]"
     :rehypePlugins="[RehypeKatex]"
-    class="max-w-none prose prose-zinc dark:prose-invert"
+    class="[&>*:first-child]:mt-0 max-w-none prose prose-zinc dark:prose-invert"
   >
     <template #a="{ children, class: classes, ...slotProps }">
       <MarkdownCitationLink

@@ -61,7 +61,7 @@
         class="min-h-[3.5rem] overflow-y-clip flex flex-col justify-start text-white rounded-2xl relative w-full overflow-clip foucs:outline-none focus-within:outline-none"
       >
         <div
-          class="flex h-full w-full items-center justify-start text-gray-900 px-5 pt-4 gap-1 overflow-hidden"
+          class="flex h-full w-full items-center justify-start text-gray-900 dark:text-gray-200 px-5 pt-4 gap-1 overflow-hidden"
         >
           <Lightbulb
             class="w-4 h-4 flex-shrink-0 text-black dark:text-gray-200"
@@ -79,19 +79,19 @@
           </button>
         </div>
         <div
-          class="text-gray-600 text-sm my-0 px-5 pb-4 flex flex-row items-center"
+          class="text-gray-600 dark:text-gray-400 text-sm my-0 px-5 pb-4 flex flex-row items-center"
         >
           {{ isExpanded ? "折叠详情" : "展开详情" }}
         </div>
       </div>
       <div
         v-if="isExpanded"
-        class="overflow-hidden text-sm pt-0 text-gray-600 flex flex-col max-w-full overflow-y-clip"
+        class="overflow-hidden text-sm pt-0 text-gray-600 dark:text-gray-400 flex flex-col max-w-full overflow-y-clip"
       >
         <div
-          class="[&>*:first-child]:mt-0 px-5 h-fit overflow-x-auto w-full focus:outline-none focus-within:outline-none"
+          class="px-5 h-fit overflow-x-auto w-full focus:outline-none focus-within:outline-none"
         >
-          <MarkdownRenderer :content="content" />
+          <MarkdownRenderer class="pb-4" :content="content" />
         </div>
       </div>
     </div>
