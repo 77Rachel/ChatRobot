@@ -309,10 +309,10 @@ const closeLightbox = () => {
             >
               <template #trigger>
                 <button
-                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium leading-[normal] cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#DFE1E4] dark:focus-visible:ring-[#35373C] disabled:opacity-50 disabled:cursor-default text-gray-800 dark:text-gray-200 hover:bg-[#EBECF0] dark:hover:bg-[#35373C] active:bg-[#DFE1E4] dark:active:bg-[#404249] rounded-full px-3.5 py-2 flex-row pl-3 pr-2.5 h-9 sm:px-3 border border-[#EBECF0] dark:border-[#1E1F22] sm:border-0 max-w-[150px]"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium leading-[normal] cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#DFE1E4] dark:focus-visible:ring-[#35373C] disabled:opacity-50 disabled:cursor-default text-gray-800 dark:text-gray-200 hover:bg-[#EBECF0] dark:hover:bg-[#35373C] active:bg-[#DFE1E4] dark:active:bg-[#404249] rounded-full px-3.5 py-2 flex-row pl-3 pr-2.5 h-9 sm:px-3 border border-[#EBECF0] dark:border-[#1E1F22] sm:border-0 max-w-[400px]"
                 >
                   <span
-                    class="text-gray-800 dark:text-gray-200 inline-block truncate max-w-[100px]"
+                    class="text-gray-800 dark:text-gray-200 inline-block truncate max-w-[400px]"
                     >{{ selectedModelName }}</span
                   >
                   <ChevronDown
@@ -320,7 +320,7 @@ const closeLightbox = () => {
                   />
                 </button>
               </template>
-              <div class="py-1 max-h-40 overflow-y-auto max-w-[200px]">
+              <div class="py-1 max-h-40 overflow-y-auto max-w-[400px]">
                 <button
                   v-for="model in models"
                   :key="model.identifier"
